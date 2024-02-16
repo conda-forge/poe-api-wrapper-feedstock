@@ -10,6 +10,8 @@ source:
   sha256: 9af7fbb6dc69767f6eaa7c06a1f6764318292eb36c6e33d6bf9e0e4265afa5bf
 
 build:
+  entry_points:
+    - poe = poe_api_wrapper.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -24,12 +26,14 @@ requirements:
     - websocket-client
     - requests-toolbelt
     - loguru
+    - rich ==13.3.4
 
 test:
   imports:
     - poe_api_wrapper
   commands:
     - pip check
+    - poe --help
   requires:
     - pip
 
