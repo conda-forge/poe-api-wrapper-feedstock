@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - httpx
+    - cloudscraper
     - websocket-client
     - requests-toolbelt
     - loguru
@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://github.com/snowby666/poe-api-wrapper
-  summary: A simple API wrapper for Poe.com using Httpx
+  summary: A simple, lightweight and efficient API wrapper for Poe.com
   license: GPL-3.0-or-later
   license_file: LICENSE
 
